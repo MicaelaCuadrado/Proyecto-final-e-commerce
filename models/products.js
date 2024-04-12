@@ -9,16 +9,32 @@ class Products extends Model {
           primaryKey: true,
           autoIncrement: true,
         },
-        title: {
+        name: {
           type: DataTypes.STRING,
           allowNull: false,
         },
-        content: {
+        description: {
           type: DataTypes.TEXT,
           allowNull: false,
         },
-        author: {
+        photo: {
+          type: DataTypes.BLOB,
+          allowNull: false,
+        },
+        price: {
+          type: DataTypes.INT,
+          allowNull: false,
+        },
+        stock: {
+          type: DataTypes.INT,
+          allowNull: false,
+        },
+        category: {
           type: DataTypes.STRING,
+          allowNull: false,
+        },
+        featured: {
+          type: DataTypes.BOOLEAN,
           allowNull: false,
         },
       },
