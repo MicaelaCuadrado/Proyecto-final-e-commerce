@@ -17,10 +17,6 @@ class Order extends Model {
           type: DataTypes.TEXT,
           allowNull: false,
         },
-        : {
-          type: DataTypes.STRING,
-          allowNull: false,
-        },
       },
       {
         sequelize,
