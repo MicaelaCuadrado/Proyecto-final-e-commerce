@@ -1,7 +1,11 @@
 const { Sequelize } = require("sequelize");
 
 const Admin = require("./Admin");
+<<<<<<< Updated upstream
 const Products = require("./products")
+=======
+const User=require("./User")
+>>>>>>> Stashed changes
 
 const sequelize = new Sequelize(
   process.env.DB_DATABASE,
@@ -16,10 +20,20 @@ const sequelize = new Sequelize(
 );
 
 Admin.initModel(sequelize);
+<<<<<<< Updated upstream
 Products.initModel(sequelize);
 
 module.exports = {
   sequelize,
   Admin,
   Products,
+=======
+User.initModel(sequelize);
+
+module.exports = {
+  sequelize,
+  Admin, 
+User
+
+>>>>>>> Stashed changes
 };
