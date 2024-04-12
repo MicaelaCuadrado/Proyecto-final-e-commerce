@@ -1,1 +1,1 @@
-const { Category } = require("../models/Index");
+const { Category } = require("../models");
