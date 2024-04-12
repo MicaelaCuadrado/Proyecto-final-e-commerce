@@ -9,15 +9,19 @@ class Admin extends Model {
           primaryKey: true,
           autoIncrement: true,
         },
-        title: {
+        name: {
           type: DataTypes.STRING,
           allowNull: false,
         },
-        content: {
-          type: DataTypes.TEXT,
+        lastname: {
+          type: DataTypes.STRING,
           allowNull: false,
         },
-        author: {
+        email: {
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
+        password: {
           type: DataTypes.STRING,
           allowNull: false,
         },
