@@ -99,6 +99,19 @@ const adminController = {
         .send("Se produjo un error al modificar el usuario.");
     }
   },
+  destroy: async (req, res) => {
+    const { id } = req.params;
+    const admin = await admin.findByPk(id);
+    if (!admin) {
+      //La expresión if (!admin) se traduce como "si admin no existe" o "si admin es igual a null o undefined".
+      return res.status(404).json({ error: "Administrador no encontrado" });
+    }
+    await admin.destroy();
+    return res.json({ message: "Administrador eliminado con éxito" });
+  },
+  catch(error) {
+    return res.status(500).json({ error: "Error al eliminar Administrador" });
+  },
 };
 
 module.exports = adminController;
