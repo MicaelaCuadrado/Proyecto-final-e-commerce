@@ -13,10 +13,13 @@ const adminController = {
       }
       return res.json(admin);
     } catch (error) {
-      console.error("Error al buscar el admin con el ID proporcionado");
+      console.error("Error al buscar el admin con el ID proporcionado", error);
       return res
-        .status(404)
-        .json({ error: "No se encontró al admin con el ID proporcionado." });
+        .status(500)
+        .json({
+          error:
+            "Se produjo un error al buscar el admin con el ID proporcionado.",
+        });
     }
   },
   show: async (req, res) => {
@@ -31,10 +34,13 @@ const adminController = {
       }
       return res.json(admin);
     } catch (error) {
-      console.error("Error al buscar el admin con el ID proporcionado");
+      console.error("Error al buscar el admin con el ID proporcionado", error);
       return res
-        .status(404)
-        .json({ error: "No se encontró al admin con el ID proporcionado." });
+        .status(500)
+        .json({
+          error:
+            "Se produjo un error al buscar el admin con el ID proporcionado.",
+        });
     }
   },
   store: async (req, res) => {
@@ -58,7 +64,6 @@ const adminController = {
         .json({ error: "Se produjo un error al buscar el administrador." });
     }
   },
-
   update: async (req, res) => {
     try {
       const { id } = req.params;
@@ -100,17 +105,18 @@ const adminController = {
     }
   },
   destroy: async (req, res) => {
-    const { id } = req.params;
-    const admin = await admin.findByPk(id);
-    if (!admin) {
-      //La expresión if (!admin) se traduce como "si admin no existe" o "si admin es igual a null o undefined".
-      return res.status(404).json({ error: "Administrador no encontrado" });
+    try {
+      const { id } = req.params;
+      const admin = await Admin.findByPk(id);
+      if (!admin) {
+        return res.status(404).json({ error: "Administrador no encontrado" });
+      }
+      await admin.destroy();
+      return res.json({ message: "Administrador eliminado con éxito" });
+    } catch (error) {
+      console.error("Error al eliminar Administrador:", error);
+      return res.status(500).json({ error: "Error al eliminar Administrador" });
     }
-    await admin.destroy();
-    return res.json({ message: "Administrador eliminado con éxito" });
-  },
-  catch(error) {
-    return res.status(500).json({ error: "Error al eliminar Administrador" });
   },
 };
 
