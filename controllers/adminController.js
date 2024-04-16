@@ -13,10 +13,13 @@ const adminController = {
       }
       return res.json(admin);
     } catch (error) {
-      console.error("Error al buscar el admin con el ID proporcionado");
+      console.error("Error al buscar el admin con el ID proporcionado", error);
       return res
-        .status(404)
-        .json({ error: "No se encontró al admin con el ID proporcionado." });
+        .status(500)
+        .json({
+          error:
+            "Se produjo un error al buscar el admin con el ID proporcionado.",
+        });
     }
   },
   show: async (req, res) => {
@@ -31,10 +34,13 @@ const adminController = {
       }
       return res.json(admin);
     } catch (error) {
-      console.error("Error al buscar el admin con el ID proporcionado");
+      console.error("Error al buscar el admin con el ID proporcionado", error);
       return res
-        .status(404)
-        .json({ error: "No se encontró al admin con el ID proporcionado." });
+        .status(500)
+        .json({
+          error:
+            "Se produjo un error al buscar el admin con el ID proporcionado.",
+        });
     }
   },
   store: async (req, res) => {
@@ -58,7 +64,6 @@ const adminController = {
         .json({ error: "Se produjo un error al buscar el administrador." });
     }
   },
-
   update: async (req, res) => {
     try {
       const { id } = req.params;
@@ -97,6 +102,20 @@ const adminController = {
       return res
         .status(500)
         .send("Se produjo un error al modificar el usuario.");
+    }
+  },
+  destroy: async (req, res) => {
+    try {
+      const { id } = req.params;
+      const admin = await Admin.findByPk(id);
+      if (!admin) {
+        return res.status(404).json({ error: "Administrador no encontrado" });
+      }
+      await admin.destroy();
+      return res.json({ message: "Administrador eliminado con éxito" });
+    } catch (error) {
+      console.error("Error al eliminar Administrador:", error);
+      return res.status(500).json({ error: "Error al eliminar Administrador" });
     }
   },
 };

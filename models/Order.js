@@ -14,7 +14,7 @@ class Order extends Model {
           allowNull: false,
         },
         status: {
-          type: DataTypes.TEXT,
+          type: DataTypes.STRING,
           allowNull: false,
         },
       },
