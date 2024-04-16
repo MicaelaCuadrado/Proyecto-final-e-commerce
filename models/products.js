@@ -26,7 +26,7 @@ class Products extends Model {
           allowNull: false,
         },
         stock: {
-          type: DataTypes.INT,
+          type: DataTypes.INTEGER,
           allowNull: false,
         },
         category: {
