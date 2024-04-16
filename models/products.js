@@ -40,7 +40,7 @@ class Products extends Model {
       },
       {
         sequelize,
-        modelName: "products",
+        modelName: "Products",
       }
     );
     return Products;
