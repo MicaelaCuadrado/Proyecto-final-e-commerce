@@ -16,6 +16,7 @@ class Order extends Model {
         status: {
           type: DataTypes.STRING,
           allowNull: false,
+          values: ["pending", ]
         },
       },
       {
