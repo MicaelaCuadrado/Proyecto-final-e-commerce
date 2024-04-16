@@ -17,16 +17,12 @@ class Products extends Model {
           type: DataTypes.TEXT,
           allowNull: false,
         },
-        photo: {
-          type: DataTypes.BLOB,
-          allowNull: false,
-        },
         price: {
           type: DataTypes.DECIMAL,
           allowNull: false,
         },
         stock: {
-          type: DataTypes.INT,
+          type: DataTypes.INTEGER,
           allowNull: false,
         },
         category: {
