@@ -1,5 +1,5 @@
 const { Order, User, Products } = require("../models");
-const { destroy } = require("../models/Admin");
+
 const ordersController = {
   index: async (req, res) => {
     try {
