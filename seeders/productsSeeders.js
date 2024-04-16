@@ -147,15 +147,6 @@ async function productsSeeder() {
       featured: false,
     },
     {
-      name: "Musculosa de mujer",
-      description:
-        "Remera de algodón rosada con negro. Lavable a maquina. Ideal apra entrenar.",
-      price: 690,
-      stock: 10,
-      category: "PENDIENTE",
-      featured: True,
-    },
-    {
       name: "Guantes Musculación Negro",
       description:
         "Excelentes guantes de entrenamiento. La almohadilla de la palma amortigua el impacto del aparato deportivo y te protege las manos de callos y ampollas.",
