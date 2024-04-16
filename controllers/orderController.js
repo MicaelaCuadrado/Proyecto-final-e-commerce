@@ -1,4 +1,4 @@
-const { Order, User } = require("../models");
+const { Order, User, Products } = require("../models");
 const { destroy } = require("../models/Admin");
 const ordersController = {
   index: async (req, res) => {
@@ -7,7 +7,7 @@ const ordersController = {
       return res.status(200).json(orders);
     } catch (error) {
       console.error(err);
-      return res.status(500).json({ message: "Oops, something went wrong" });
+      return res.status(500).json({ message: "Orden no encontrada" });
     }
   },
 
@@ -16,11 +16,11 @@ const ordersController = {
     try {
       const order = await Order.findByPk(id);
       if (!order) {
-        return res.status(404).json({ error: "Order not found" });
+        return res.status(404).json({ error: "Orden no encontrada" });
       }
       return res.json;
     } catch (error) {
-      return res.status(500).json({ error: "Error getting order" });
+      return res.status(500).json({ error: "Error al obtener la orden" });
     }
   },
   store: async (req, res) => {
