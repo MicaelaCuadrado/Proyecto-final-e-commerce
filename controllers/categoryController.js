@@ -10,6 +10,7 @@ const categoryController = {
       return res.status(500).json({ error: "Error al buscar las categorías" });
     }
   },
+
   show: async (req, res) => {
     try {
       const { id } = req.params;
@@ -25,6 +26,7 @@ const categoryController = {
       return res.status(500).json({ error: "Error al buscar la categoría" });
     }
   },
+
   store: async (req, res) => {
     try {
       const { name, description } = req.body;
@@ -35,6 +37,7 @@ const categoryController = {
       return res.status(500).json({ error: "Error al crear la categoría" });
     }
   },
+
   update: async (req, res) => {
     try {
       const { id } = req.params;
@@ -59,6 +62,7 @@ const categoryController = {
       return res.status(500).json({ error: "Error al modificar la categoría" });
     }
   },
+
   destroy: async (req, res) => {
     try {
       const { id } = req.params;
