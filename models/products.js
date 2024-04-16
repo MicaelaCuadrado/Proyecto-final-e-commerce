@@ -17,10 +17,6 @@ class Products extends Model {
           type: DataTypes.TEXT,
           allowNull: false,
         },
-        photo: {
-          type: DataTypes.BLOB,
-          allowNull: false,
-        },
         price: {
           type: DataTypes.DECIMAL,
           allowNull: false,
