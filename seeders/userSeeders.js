@@ -1,5 +1,7 @@
 const { faker } = require("@faker-js/faker");
 
+
+
 async function userSeeder() {
   for (let i = 0; i < 20; i++) {
     const firstname = faker.person.firstName();
