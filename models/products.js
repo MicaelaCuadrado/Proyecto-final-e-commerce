@@ -22,7 +22,7 @@ class Products extends Model {
           allowNull: false,
         },
         price: {
-          type: DataTypes.INT,
+          type: DataTypes.DECIMAL,
           allowNull: false,
         },
         stock: {
