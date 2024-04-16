@@ -31,7 +31,15 @@ const userController = {
     return res.send("Usuario modificado con éxito!");
   },
   destroy: async (req, res) => {
-  }
+    const { id } = req.params;
+
+    const user = await User.findByPk(id);
+    if (!user) {
+      return res.status(404).send("Usuario no encontrado");
+    }
+    await user.destroy();
+    return res.send("Usuario eliminado con éxito!");
+  },
 };
 
 module.exports = userController;
