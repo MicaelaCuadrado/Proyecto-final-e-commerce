@@ -1,5 +1,4 @@
 const { Order, User, Products } = require("../models");
-
 const ordersController = {
   index: async (req, res) => {
     try {
