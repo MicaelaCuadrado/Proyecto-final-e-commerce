@@ -10,4 +10,6 @@ router.post("/", adminController.store);
 
 router.patch("/:id", adminController.update);
 
+router.delete("/:id", adminController.destroy);
+
 module.exports = router;
