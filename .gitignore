@@ -1,4 +1,7 @@
-node_modules
+# Ignorar package-lock.json y package.json
+package-lock.json
+package.json
+
 # ----------------------------------------------------------------------------
 # Defaults de NODE obtenidos aquí:
 # https://github.com/github/gitignore.
