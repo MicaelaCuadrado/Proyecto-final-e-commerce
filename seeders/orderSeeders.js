@@ -3,8 +3,8 @@ const { Order } = require("../models");
 
 async function orderSeeder() {
   for (let i = 0; i < 5; i++) {
-    const firstname = faker.person.firstName();
-    const lastname = faker.person.lastName();
+    const firstname = faker.name.firstName();
+    const lastname = faker.name.lastName();
     const newOrder = {
       firstname,
       lastname,
