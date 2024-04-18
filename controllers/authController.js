@@ -10,7 +10,7 @@ const authController = {
     if (!user || user.password !== password)
       return res.json({ message: "Credenciales invalidas" });
 
-    const token = jwt.sign({ sub: user.id }, "UnStringMuySecreto");
+    const accessToken = jwt.sign({ sub: user.id }, "UnStringMuySecreto");
 
     return res.json(accessToken);
   },
