@@ -1,7 +1,5 @@
 const { faker } = require("@faker-js/faker");
-const { User } = require("../models")
-
-
+const { User } = require("../models");
 
 async function userSeeder() {
   for (let i = 0; i < 20; i++) {
@@ -14,7 +12,7 @@ async function userSeeder() {
       phoneNumber: faker.phone.number(),
       password: "1234",
     };
-    // Aquí debes utilizar el modelo de usuario adecuado para crear un nuevo usuario
+
     await User.create(newUser);
   }
 }
