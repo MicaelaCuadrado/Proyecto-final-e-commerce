@@ -25,10 +25,6 @@ class Products extends Model {
           type: DataTypes.INTEGER,
           allowNull: false,
         },
-        category: {
-          type: DataTypes.STRING,
-          allowNull: false,
-        },
         featured: {
           type: DataTypes.BOOLEAN,
           allowNull: false,

@@ -24,6 +24,7 @@ User.initModel(sequelize);
 Category.initModel(sequelize);
 Order.initModel(sequelize);
 
+
 module.exports = {
   sequelize,
   Admin,
