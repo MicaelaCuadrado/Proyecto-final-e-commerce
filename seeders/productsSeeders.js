@@ -174,7 +174,7 @@ async function productsSeeder() {
       featured: true,
     },
   ];
-  await Products.create(products);
+  await Products.bulkCreate(products);
 }
 
 module.exports = productsSeeder;

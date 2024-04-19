@@ -1,4 +1,4 @@
-const { Category } = require("../modelss");
+const { Category } = require("../models");
 
 async function categorySeeder() {
   const category = [
@@ -13,7 +13,7 @@ async function categorySeeder() {
       name: "Suplementos",
     },
   ];
-  await Category.create(category);
+  await Category.bulkCreate(category);
 }
 
 module.exports = categorySeeder;
