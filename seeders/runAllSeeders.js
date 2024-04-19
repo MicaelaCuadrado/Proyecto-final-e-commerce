@@ -8,5 +8,5 @@ const productSeeder = require("./productsSeeders");
 userSeeder();
 adminSeeder();
 orderSeeder();
-productSeeder;
+productSeeder();
 console.log("Se corrieron los seeders!");
