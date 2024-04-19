@@ -1,6 +1,3 @@
-# Ignorar package-lock.json y package.json
-package-lock.json
-package.json
 
 # ----------------------------------------------------------------------------
 # Defaults de NODE obtenidos aquí:
@@ -49,8 +46,6 @@ build/Release
 
 # Dependency directories
 node_modules/
-package-lock.json/
-package.json/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
