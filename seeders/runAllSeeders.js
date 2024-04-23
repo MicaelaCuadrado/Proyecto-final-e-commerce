@@ -12,3 +12,5 @@ orderSeeder();
 productSeeder();
 categorySeeder();
 console.log("Se corrieron los seeders!");
+
+
