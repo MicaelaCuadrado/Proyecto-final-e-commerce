@@ -1,4 +1,5 @@
 const { User } = require("../models");
+const bcrypt = require("bcryptjs");
 
 const userController = {
   index: async (req, res) => {
@@ -23,7 +24,13 @@ const userController = {
   store: async (req, res) => {
     try {
       const { firstname, lastname, email, password } = req.body;
-      await User.create({ firstname, lastname, email, password });
+      const hashedPassword = await bcrypt.hash(password, 10);
+      await User.create({
+        firstname,
+        lastname,
+        email,
+        password: hashedPassword,
+      });
       return res.send("El usuario fue creado con éxito!");
     } catch (error) {
       console.error("Error", error);
@@ -34,13 +41,13 @@ const userController = {
     try {
       const { id } = req.params;
       const { firstname, lastname, email, password } = req.body;
-
       const user = await User.findByPk(id);
+      const hashedPassword = await bcrypt.hash(password, 10);
 
       if (firstname) user.firstname = firstname;
       if (lastname) user.lastname = lastname;
       if (email) user.email = email;
-      if (password) user.password = password;
+      if (hashedPassword) user.password = hashedPassword;
 
       await user.save();
 

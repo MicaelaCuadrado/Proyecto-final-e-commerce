@@ -1,4 +1,5 @@
 const { Admin } = require("../models");
+const bcrypt = require("bcryptjs");
 
 const adminController = {
   index: async (req, res) => {
@@ -14,12 +15,10 @@ const adminController = {
       return res.json(admin);
     } catch (error) {
       console.error("Error al buscar el admin con el ID proporcionado", error);
-      return res
-        .status(500)
-        .json({
-          error:
-            "Se produjo un error al buscar el admin con el ID proporcionado.",
-        });
+      return res.status(500).json({
+        error:
+          "Se produjo un error al buscar el admin con el ID proporcionado.",
+      });
     }
   },
   show: async (req, res) => {
@@ -35,12 +34,10 @@ const adminController = {
       return res.json(admin);
     } catch (error) {
       console.error("Error al buscar el admin con el ID proporcionado", error);
-      return res
-        .status(500)
-        .json({
-          error:
-            "Se produjo un error al buscar el admin con el ID proporcionado.",
-        });
+      return res.status(500).json({
+        error:
+          "Se produjo un error al buscar el admin con el ID proporcionado.",
+      });
     }
   },
   store: async (req, res) => {
@@ -90,7 +87,8 @@ const adminController = {
         admin.email = email;
       }
       if (password) {
-        admin.password = password;
+        const hashedPassword = await bcrypt.hash(password, 10);
+        admin.password = hashedPassword;
       }
 
       // Guarda los cambios en la base de datos
