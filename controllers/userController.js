@@ -24,13 +24,26 @@ const userController = {
   },
   store: async (req, res) => {
     try {
-      const { firstname, lastname, email, password } = req.body;
+      const { firstname, lastname, email, password, address, phoneNumber } =
+        req.body;
+      await User.create({
+        firstname,
+        lastname,
+        email,
+        password,
+        phoneNumber,
+        address,
+      });
+      const { firstname, lastname, email, password, address, phoneNumber } =
+        req.body;
       const hashedPassword = await bcrypt.hash(password, 10);
       await User.create({
         firstname,
         lastname,
         email,
         password: hashedPassword,
+        address,
+        phoneNumber,
       });
       return res.send("El usuario fue creado con éxito!");
     } catch (error) {
@@ -41,14 +54,18 @@ const userController = {
   update: async (req, res) => {
     try {
       const { id } = req.params;
-      const { firstname, lastname, email, password } = req.body;
+      const { firstname, lastname, email, password, address, phoneNumber } =
+        req.body;
+
       const user = await User.findByPk(id);
       const hashedPassword = await bcrypt.hash(password, 10);
 
       if (firstname) user.firstname = firstname;
       if (lastname) user.lastname = lastname;
       if (email) user.email = email;
-      if (hashedPassword) user.password = hashedPassword;
+      if (password) user.password = password;
+      if (address) user.address = address;
+      if (phoneNumber) user.phoneNumber = phoneNumber;
 
       await user.save();
 
