@@ -1,5 +1,6 @@
 const { faker } = require("@faker-js/faker");
 const { User } = require("../models");
+const { address } = require("faker/lib/locales/az");
 
 async function userSeeder() {
   for (let i = 0; i < 20; i++) {
@@ -11,6 +12,8 @@ async function userSeeder() {
       email: faker.internet.email({ firstName: firstname, lastName: lastname }),
       phoneNumber: faker.phone.number(),
       password: "1234",
+      address: "Anima 123",
+      phoneNumber: "12345678",
     };
 
     await User.create(newUser);

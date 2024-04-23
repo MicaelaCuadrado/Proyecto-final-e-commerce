@@ -22,8 +22,16 @@ const userController = {
   },
   store: async (req, res) => {
     try {
-      const { firstname, lastname, email, password } = req.body;
-      await User.create({ firstname, lastname, email, password });
+      const { firstname, lastname, email, password, address, phoneNumber } =
+        req.body;
+      await User.create({
+        firstname,
+        lastname,
+        email,
+        password,
+        phoneNumber,
+        address,
+      });
       return res.send("El usuario fue creado con éxito!");
     } catch (error) {
       console.error("Error", error);
@@ -33,7 +41,8 @@ const userController = {
   update: async (req, res) => {
     try {
       const { id } = req.params;
-      const { firstname, lastname, email, password } = req.body;
+      const { firstname, lastname, email, password, address, phoneNumber } =
+        req.body;
 
       const user = await User.findByPk(id);
 
@@ -41,6 +50,8 @@ const userController = {
       if (lastname) user.lastname = lastname;
       if (email) user.email = email;
       if (password) user.password = password;
+      if (address) user.address = address;
+      if (phoneNumber) user.phoneNumber = phoneNumber;
 
       await user.save();
 
