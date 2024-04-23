@@ -33,13 +33,16 @@ const userController = {
         phoneNumber,
         address,
       });
-      const { firstname, lastname, email, password } = req.body;
+      const { firstname, lastname, email, password, address, phoneNumber } =
+        req.body;
       const hashedPassword = await bcrypt.hash(password, 10);
       await User.create({
         firstname,
         lastname,
         email,
         password: hashedPassword,
+        address,
+        phoneNumber,
       });
       return res.send("El usuario fue creado con éxito!");
     } catch (error) {
