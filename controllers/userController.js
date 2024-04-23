@@ -1,6 +1,7 @@
 const { User } = require("../models");
 const bcrypt = require("bcryptjs");
 
+
 const userController = {
   index: async (req, res) => {
     try {
