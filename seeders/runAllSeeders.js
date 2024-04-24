@@ -6,11 +6,14 @@ const orderSeeder = require("./orderSeeders");
 const productSeeder = require("./productsSeeders");
 const categorySeeder = require("./categorySeeders");
 
-userSeeder();
-adminSeeder();
-orderSeeder();
-productSeeder();
-categorySeeder();
-console.log("Se corrieron los seeders!");
+async function runAllSeeders() {
+  await userSeeder();
+  await adminSeeder();
+  await categorySeeder();
+  await productSeeder();
+  await orderSeeder();
+  console.log("Se corrieron los seeders!");
+  process.exit();
+}
 
-
+runAllSeeders()

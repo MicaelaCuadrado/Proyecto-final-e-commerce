@@ -9,20 +9,17 @@ async function orderSeeder() {
       items: [
         {
           name: "Musculosa Gris",
-          description:
-            "Remera de algodón gris. Lavable a maquina. Ideal para entrenar.",
+          
           price: 690,
           stock: 25,
-          category: "PENDIENTE",
-          featured: true,
         },
-        {
+       /*  {
           name: "Remera Negra",
           description:
             "Remera de poliester negra. Lavable a maquina. Ideal para entrenar.",
           price: 720,
           stock: 15,
-          category: "PENDIENTE",
+          categoryId: "PENDIENTE",
           featured: false,
         },
         {
@@ -31,7 +28,7 @@ async function orderSeeder() {
             "Remera de algodón celeste. Lavable a maquina. Ideal para entrenar.",
           price: 720,
           stock: 15,
-          category: "PENDIENTE",
+          categoryId: "PENDIENTE",
           featured: false,
         },
         {
@@ -40,7 +37,7 @@ async function orderSeeder() {
             "Remera de algodón naranja. Lavable a maquina. Ideal para entrenar.",
           price: 500,
           stock: 10,
-          category: "PENDIENTE",
+          categoryId: "PENDIENTE",
           featured: true,
         },
         {
@@ -49,9 +46,9 @@ async function orderSeeder() {
             "Este pack contiene 4 bandas de latex en 4 niveles de resistencia: ligero, medio, pesado.",
           price: 549,
           stock: 20,
-          category: "PENDIENTE",
+          categoryId: "PENDIENTE",
           featured: false,
-        },
+        }, */
       ],
     };
     await Order.create(newOrder);
