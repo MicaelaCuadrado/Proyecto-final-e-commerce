@@ -11,9 +11,9 @@ router.use(express.json());
 
 router.use("/admins", adminRoutes);
 router.use("/tokens", authRoutes);
-router.use("/user", userRoutes);
+router.use("/users", userRoutes);
 router.use("/products", productsRoutes);
 router.use("orders", orderRoutes);
-router.use("/orders", categoryRoutes);
+router.use("/categories", categoryRoutes);
 
 module.exports = router;
