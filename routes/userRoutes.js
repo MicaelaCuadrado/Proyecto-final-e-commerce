@@ -3,7 +3,11 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 const { expressjwt: checkjwt } = require("express-jwt");
 
-router.get("/", userController.index);
+router.get(
+  "/",
+  checkjwt({ secret: "UnStringMuySecreto", algorithms: ["HS256"] }),
+  userController.index
+);
 router.get(
   "/:id",
   checkjwt({ secret: "UnStringMuySecreto", algorithms: ["HS256"] }),
@@ -17,7 +21,7 @@ router.patch(
 );
 router.delete(
   "/:id",
-  checkjwt({ secret: "UnStringMuySecreto", algorithms: ["HS256"] }),
+  checkjwt({ secret: "UnStringMuySecreto", algorithms: ["HS256"] }), //check el usuario se deberia poder borrar
   userController.destroy
 );
 
