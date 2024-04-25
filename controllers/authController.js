@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const { User } = require("../models");
 require("dotenv").config();
+const bcrypt = require("bcryptjs");
 
 const authController = {
   getToken: async (req, res) => {
@@ -8,7 +9,9 @@ const authController = {
 
     const user = await User.findOne({ where: { email } });
 
-    if (!user || user.password !== password)
+    const passwordMatch = await bcrypt.compare(password, user.password);
+
+    if (!passwordMatch)
       return res.json({ message: "Credenciales invalidas" });
 
     const accessToken = jwt.sign({ sub: user.id }, process.env.SECRET);
