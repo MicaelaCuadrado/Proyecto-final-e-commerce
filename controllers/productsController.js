@@ -53,7 +53,7 @@ const productsController = {
         req.body;
 
       const products = await Products.findByPk(id);
-      if (!product) {
+      if (!products) {
         return res.status(404).json({ message: "Producto no encontrado" });
       }
       if (name) products.name = name;
@@ -77,11 +77,11 @@ const productsController = {
   destroy: async (req, res) => {
     try {
       const { id } = req.params;
-      const product = await Products.findByPk(id);
-      if (!product) {
+      const products = await Products.findByPk(id);
+      if (!products) {
         return res.status(404).json({ message: "Producto no encontrado" });
       }
-      await product.destroy();
+      await products.destroy();
       return res.send("Producto eliminado con éxito");
     } catch (error) {
       console.error("Error", error);

@@ -4,23 +4,23 @@ const bcrypt = require("bcryptjs");
 const adminController = {
   index: async (req, res) => {
     try {
-      const { id } = req.params;
-      const admin = await Admin.findByPk(id);
+      const admin = await Admin.findAll();
 
       if (!admin) {
         return res
           .status(404)
-          .json({ error: "No se encontró al admin con el ID proporcionado" });
+          .json({ error: "No se encontró el administrador con el id proporcionado" });
       }
       return res.json(admin);
     } catch (error) {
-      console.error("Error al buscar el admin con el ID proporcionado", error);
+      console.error("Error al buscar el administrador con el id proporcionado", error);
       return res.status(500).json({
         error:
-          "Se produjo un error al buscar el admin con el ID proporcionado.",
+          "Se produjo un error al buscar el administrador con el id proporcionado.",
       });
     }
   },
+
   show: async (req, res) => {
     try {
       const { id } = req.params;
@@ -29,17 +29,18 @@ const adminController = {
       if (!admin) {
         return res
           .status(404)
-          .json({ error: "No se encontró al admin con el ID proporcionado" });
+          .json({ error: "No se encontró el administrador con el id proporcionado" });
       }
       return res.json(admin);
     } catch (error) {
-      console.error("Error al buscar el admin con el ID proporcionado", error);
+      console.error("Error al buscar el administrador con el id proporcionado", error);
       return res.status(500).json({
         error:
-          "Se produjo un error al buscar el admin con el ID proporcionado.",
+          "Se produjo un error al buscar el administrador con el id proporcionado.",
       });
     }
   },
+
   store: async (req, res) => {
     try {
       const { id } = req.params;
@@ -49,7 +50,7 @@ const adminController = {
       if (!admin) {
         return res
           .status(404)
-          .json({ error: "No se encontró al admin con el ID proporcionado." });
+          .json({ error: "No se encontró el administrador con el id proporcionado." });
       }
 
       // Devolver el administrador en formato JSON
@@ -61,6 +62,7 @@ const adminController = {
         .json({ error: "Se produjo un error al buscar el administrador." });
     }
   },
+
   update: async (req, res) => {
     try {
       const { id } = req.params;
@@ -73,7 +75,7 @@ const adminController = {
       if (!admin) {
         return res
           .status(404)
-          .json({ error: "No se encontró al admin con el ID proporcionado." });
+          .json({ error: "No se encontró el administrador con el id proporcionado." });
       }
 
       // Actualiza los campos si se proporcionaron en el body de la solicitud
@@ -102,6 +104,7 @@ const adminController = {
         .send("Se produjo un error al modificar el usuario.");
     }
   },
+
   destroy: async (req, res) => {
     try {
       const { id } = req.params;

@@ -51,7 +51,7 @@ const userController = {
       if (firstname) user.firstname = firstname;
       if (lastname) user.lastname = lastname;
       if (email) user.email = email;
-      if (password) user.password = password;
+      if (password) user.password = hashedPassword;
       if (address) user.address = address;
       if (phoneNumber) user.phoneNumber = phoneNumber;
 

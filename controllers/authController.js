@@ -1,6 +1,6 @@
+require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const { User, Admin } = require("../models");
-require("dotenv").config();
 const bcrypt = require("bcryptjs");
 
 const authController = {
@@ -9,13 +9,13 @@ const authController = {
 
     const user = await User.findOne({ where: { email } });
     const admin = await Admin.findOne({ where: { email } });
-    console.log(user.password);
 
     if (!(admin && (await bcrypt.compare(password, admin.password)))) {
       if (!(user && (await bcrypt.compare(password, user.password)))) {
         return res.json({ message: "Credenciales invalidas" });
       }
     }
+
     if (admin) {
       const accessToken = jwt.sign(
         { sub: admin.id, role: "admin" },
@@ -33,4 +33,5 @@ const authController = {
     }
   },
 };
+
 module.exports = authController;
