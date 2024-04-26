@@ -28,7 +28,7 @@ class Admin extends Model {
       },
       {
         sequelize,
-        modelName: "administrator",
+        modelName: "admin",
       }
     );
     return Admin;

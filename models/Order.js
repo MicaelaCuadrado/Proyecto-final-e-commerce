@@ -21,7 +21,7 @@ class Order extends Model {
       },
       {
         sequelize,
-        modelName: "orders",
+        modelName: "order",
       }
     );
     return Order;

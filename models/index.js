@@ -1,7 +1,7 @@
 const { Sequelize } = require("sequelize");
 
 const Admin = require("./Admin");
-const Products = require("./products");
+const Products = require("./Product");
 const User = require("./User");
 const Category = require("./Category");
 const Order = require("./Order");

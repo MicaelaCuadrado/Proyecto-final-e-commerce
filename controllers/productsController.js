@@ -29,7 +29,7 @@ const productsController = {
   },
   store: async (req, res) => {
     try {
-      const { name, description, photo, price, stock, category, featured } =
+      const { name, description, photo, price, stock, categoryId, featured } =
         req.body;
       await Products.create({
         name,
@@ -37,7 +37,7 @@ const productsController = {
         photo,
         price,
         stock,
-        category,
+        categoryId,
         featured,
       });
       return res.send("El producto fue creado con éxito!");
