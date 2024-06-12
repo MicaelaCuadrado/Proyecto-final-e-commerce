@@ -9,7 +9,7 @@ async function productsSeeder() {
       price: 690,
       stock: 25,
       categoryId: 1,
-      featured: true,
+      featured: false,
     },
     {
       name: "Musculosa Gris",
@@ -18,7 +18,7 @@ async function productsSeeder() {
       price: 690,
       stock: 25,
       categoryId: 1,
-      featured: true,
+      featured: false,
     },
     {
       name: "Remera Negra",
@@ -45,7 +45,7 @@ async function productsSeeder() {
       price: 500,
       stock: 10,
       categoryId: 1,
-      featured: true,
+      featured: false,
     },
     {
       name: "Bandas Elásticas de Resistencia",
@@ -54,7 +54,7 @@ async function productsSeeder() {
       price: 549,
       stock: 20,
       categoryId: 2,
-      featured: false,
+      featured: true,
     },
     {
       name: "Mancuernas de 1kg",
@@ -90,7 +90,7 @@ async function productsSeeder() {
       price: 500,
       stock: 15,
       categoryId: 2,
-      featured: false,
+      featured: true,
     },
     {
       name: "Cuerda de saltar",
@@ -99,7 +99,7 @@ async function productsSeeder() {
       price: 499,
       stock: 20,
       categoryId: 2,
-      featured: true,
+      featured: false,
     },
     {
       name: "Cuerda de trepar",
@@ -135,7 +135,7 @@ async function productsSeeder() {
       price: 1999,
       stock: 15,
       categoryId: 2,
-      featured: true,
+      featured: false,
     },
     {
       name: "Whey Protein 3kg",
@@ -153,7 +153,7 @@ async function productsSeeder() {
       price: 390,
       stock: 15,
       categoryId: 2,
-      featured: true,
+      featured: false,
     },
     {
       name: "Rodilleras de Neopreno",
@@ -162,7 +162,7 @@ async function productsSeeder() {
       price: 1690,
       stock: 5,
       categoryId: 2,
-      featured: false,
+      featured: true,
     },
     {
       name: "Botella Agua 1lt",
