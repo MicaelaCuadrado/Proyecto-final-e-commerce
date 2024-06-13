@@ -3,54 +3,54 @@ const { Products } = require("../models");
 async function productsSeeder() {
   const products = [
     {
-      name: "Musculosa Rosada",
+      name: "Disco Olimpico de Goma 10kg",
       description:
-        "Remera de algodón rosada con negro. Lavable a maquina. Ideal para entrenar.",
+        "El pase central esta hecho de acero inoxidable, permite la colocación sencilla de la barra.",
       price: 690,
       stock: 25,
       categoryId: 1,
       featured: false,
-      photo: "",
+      photo: "img/Disco10.png",
     },
     {
-      name: "Musculosa Gris",
+      name: "Disco Olimpico de Goma 15kg",
       description:
-        "Remera de algodón gris. Lavable a maquina. Ideal para entrenar.",
-      price: 690,
+        "El pase central esta hecho de acero inoxidable, permite la colocación sencilla de la barra.",
+      price: 3.890,
       stock: 25,
       categoryId: 1,
       featured: false,
-      photo: "",
+      photo: "img/Disco15.png",
     },
     {
-      name: "Remera Negra",
+      name: "Disco Olimpico de Goma 20kg",
       description:
-        "Remera de poliester negra. Lavable a maquina. Ideal para entrenar.",
-      price: 720,
+        "El pase central esta hecho de acero inoxidable, permite la colocación sencilla de la barra.",
+      price: 3.890,
       stock: 15,
       categoryId: 1,
       featured: false,
-      photo: "",
+      photo: "img/Disco20.png",
     },
     {
-      name: "Remera Celeste",
+      name: "Step para Fitness",
       description:
-        "Remera de algodón celeste. Lavable a maquina. Ideal para entrenar.",
-      price: 720,
+        "Step de aeróbic profesional ideal para hacer ejercicios en casa o en el gimnasio. Ayuda a definir la musculatura, mejorar la flexibilidad y la estabilidad, y también mejora la resistencia cardiovascular",
+      price: 890,
       stock: 15,
       categoryId: 1,
       featured: false,
-      photo: "",
+      photo: "img/Step.png",
     },
     {
-      name: "Remera Naranja",
+      name: "Rueda Abdominal",
       description:
-        "Remera de algodón naranja. Lavable a maquina. Ideal para entrenar.",
-      price: 500,
+        "La secuencia del movimiento está optimizado para trabajar todo el abdomen, pero además también los músculos de apoyo en los brazos, la parte posterior de las piernas, los hombros y la espalda sin correr el riesgo de dolor o incluso lesiones. Además, esta rueda cuenta con pedales que permiten más ejercicios para el abdomen, la espalda y las piernas.",
+      price: 499,
       stock: 10,
       categoryId: 1,
       featured: false,
-      photo: "",
+      photo: "img/RuedaAbdominal.png",
     },
     {
       name: "Bandas Elásticas de Resistencia",
@@ -60,7 +60,7 @@ async function productsSeeder() {
       stock: 20,
       categoryId: 2,
       featured: true,
-      photo: "",
+      photo: "img/bandaElastica.jpg",
     },
     {
       name: "Mancuernas de 1kg",
@@ -70,7 +70,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "",
+      photo: "img/mancuerna1.png",
     },
     {
       name: "Mancuernas de 2kg",
@@ -80,7 +80,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "",
+      photo: "img/mancuerna2.png",
     },
     {
       name: "Mancuernas de 3kg",
@@ -90,7 +90,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "",
+      photo: "img/mancuerna3.png",
     },
     {
       name: "Mancuernas de 5kg",
@@ -100,7 +100,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: true,
-      photo: "",
+      photo: "img/mancuerna5.jpg",
     },
     {
       name: "Cuerda de saltar",
@@ -110,7 +110,7 @@ async function productsSeeder() {
       stock: 20,
       categoryId: 2,
       featured: false,
-      photo: "",
+      photo: "img/cuerdaSalto.png",
     },
     {
       name: "Cuerda de trepar",
@@ -120,7 +120,7 @@ async function productsSeeder() {
       stock: 5,
       categoryId: 2,
       featured: false,
-      photo: "",
+      photo: "img/cuerdaTrepar.png",
     },
     {
       name: "Colchoneta de Yoga",
@@ -130,7 +130,7 @@ async function productsSeeder() {
       stock: 20,
       categoryId: 2,
       featured: false,
-      photo: "",
+      photo: "img/colchonetaYoga.png",
     },
     {
       name: "Pelota Medicinal de Yoga",
@@ -140,7 +140,7 @@ async function productsSeeder() {
       stock: 10,
       categoryId: 2,
       featured: false,
-      photo: "",
+      photo: "img/pelotaPilates.png",
     },
     {
       name: "Whey Protein 1kg",
@@ -150,17 +150,17 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "",
+      photo: "img/wheyProtein.png",
     },
     {
-      name: "Whey Protein 3kg",
+      name: "Whey Protein 2kg Chocolate",
       description:
-        "Este es un suplemento proteico-energético para deportistas a base de Whey Protein y Maltodextrina.",
+        "Es una combinación ultra premium del Isolado, Concentrado e Hidrolizado de proteína de suero de la más alta calidad para un desarrollo muscular óptimo, soporte y recuperación.",
       price: 4800,
       stock: 10,
       categoryId: 2,
       featured: false,
-      photo: "",
+      photo: "img/WheyProteinChoc.jpg",
     },
     {
       name: "Guantes Musculación Negro",
@@ -170,7 +170,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "",
+      photo: "img/GuantesNeopreno.png",
     },
     {
       name: "Rodilleras de Neopreno",
@@ -180,7 +180,7 @@ async function productsSeeder() {
       stock: 5,
       categoryId: 2,
       featured: true,
-      photo: "",
+      photo: "img/rodillera.jpg",
     },
     {
       name: "Botella Agua 1lt",
@@ -190,7 +190,7 @@ async function productsSeeder() {
       stock: 10,
       categoryId: 2,
       featured: true,
-      photo: "",
+      photo: "img/botella1.jpg",
     },
   ];
   await Products.bulkCreate(products);
