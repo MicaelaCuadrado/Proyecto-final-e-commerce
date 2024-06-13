@@ -10,6 +10,7 @@ async function productsSeeder() {
       stock: 25,
       categoryId: 1,
       featured: false,
+      photo: "",
     },
     {
       name: "Musculosa Gris",
@@ -19,6 +20,7 @@ async function productsSeeder() {
       stock: 25,
       categoryId: 1,
       featured: false,
+      photo: "",
     },
     {
       name: "Remera Negra",
@@ -28,6 +30,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 1,
       featured: false,
+      photo: "",
     },
     {
       name: "Remera Celeste",
@@ -37,6 +40,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 1,
       featured: false,
+      photo: "",
     },
     {
       name: "Remera Naranja",
@@ -46,6 +50,7 @@ async function productsSeeder() {
       stock: 10,
       categoryId: 1,
       featured: false,
+      photo: "",
     },
     {
       name: "Bandas Elásticas de Resistencia",
@@ -55,6 +60,7 @@ async function productsSeeder() {
       stock: 20,
       categoryId: 2,
       featured: true,
+      photo: "",
     },
     {
       name: "Mancuernas de 1kg",
@@ -64,6 +70,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
+      photo: "",
     },
     {
       name: "Mancuernas de 2kg",
@@ -73,6 +80,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
+      photo: "",
     },
     {
       name: "Mancuernas de 3kg",
@@ -82,6 +90,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
+      photo: "",
     },
     {
       name: "Mancuernas de 5kg",
@@ -91,6 +100,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: true,
+      photo: "",
     },
     {
       name: "Cuerda de saltar",
@@ -100,6 +110,7 @@ async function productsSeeder() {
       stock: 20,
       categoryId: 2,
       featured: false,
+      photo: "",
     },
     {
       name: "Cuerda de trepar",
@@ -109,6 +120,7 @@ async function productsSeeder() {
       stock: 5,
       categoryId: 2,
       featured: false,
+      photo: "",
     },
     {
       name: "Colchoneta de Yoga",
@@ -118,6 +130,7 @@ async function productsSeeder() {
       stock: 20,
       categoryId: 2,
       featured: false,
+      photo: "",
     },
     {
       name: "Pelota Medicinal de Yoga",
@@ -127,6 +140,7 @@ async function productsSeeder() {
       stock: 10,
       categoryId: 2,
       featured: false,
+      photo: "",
     },
     {
       name: "Whey Protein 1kg",
@@ -136,6 +150,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
+      photo: "",
     },
     {
       name: "Whey Protein 3kg",
@@ -145,6 +160,7 @@ async function productsSeeder() {
       stock: 10,
       categoryId: 2,
       featured: false,
+      photo: "",
     },
     {
       name: "Guantes Musculación Negro",
@@ -154,6 +170,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
+      photo: "",
     },
     {
       name: "Rodilleras de Neopreno",
@@ -163,6 +180,7 @@ async function productsSeeder() {
       stock: 5,
       categoryId: 2,
       featured: true,
+      photo: "",
     },
     {
       name: "Botella Agua 1lt",
@@ -172,6 +190,7 @@ async function productsSeeder() {
       stock: 10,
       categoryId: 2,
       featured: true,
+      photo: "",
     },
   ];
   await Products.bulkCreate(products);

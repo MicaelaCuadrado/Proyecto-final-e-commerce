@@ -29,6 +29,10 @@ class Product extends Model {
           type: DataTypes.BOOLEAN,
           allowNull: false,
         },
+        photo: {
+          type: DataTypes.STRING,
+          allowNull: true,
+        },
       },
       {
         sequelize,
