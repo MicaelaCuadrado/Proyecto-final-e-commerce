@@ -10,27 +10,27 @@ async function productsSeeder() {
       stock: 25,
       categoryId: 1,
       featured: false,
-      photo: "img/Disco10.png",
+      photo: "Disco10.png",
     },
     {
       name: "Disco Olimpico de Goma 15kg",
       description:
         "El pase central esta hecho de acero inoxidable, permite la colocación sencilla de la barra.",
-      price: 3.890,
+      price: 3.89,
       stock: 25,
       categoryId: 1,
       featured: false,
-      photo: "img/Disco15.png",
+      photo: "Disco15.png",
     },
     {
       name: "Disco Olimpico de Goma 20kg",
       description:
         "El pase central esta hecho de acero inoxidable, permite la colocación sencilla de la barra.",
-      price: 3.890,
+      price: 3.89,
       stock: 15,
       categoryId: 1,
       featured: false,
-      photo: "img/Disco20.png",
+      photo: "Disco20.png",
     },
     {
       name: "Step para Fitness",
@@ -40,7 +40,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 1,
       featured: false,
-      photo: "img/Step.png",
+      photo: "Step.png",
     },
     {
       name: "Rueda Abdominal",
@@ -50,7 +50,7 @@ async function productsSeeder() {
       stock: 10,
       categoryId: 1,
       featured: false,
-      photo: "img/RuedaAbdominal.png",
+      photo: "RuedaAbdominal.png",
     },
     {
       name: "Bandas Elásticas de Resistencia",
@@ -60,7 +60,7 @@ async function productsSeeder() {
       stock: 20,
       categoryId: 2,
       featured: true,
-      photo: "img/bandaElastica.jpg",
+      photo: "bandaElastica.jpg",
     },
     {
       name: "Mancuernas de 1kg",
@@ -70,7 +70,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "img/mancuerna1.png",
+      photo: "mancuerna1.png",
     },
     {
       name: "Mancuernas de 2kg",
@@ -80,7 +80,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "img/mancuerna2.png",
+      photo: "mancuerna2.png",
     },
     {
       name: "Mancuernas de 3kg",
@@ -90,7 +90,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "img/mancuerna3.png",
+      photo: "mancuerna3.png",
     },
     {
       name: "Mancuernas de 5kg",
@@ -100,7 +100,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: true,
-      photo: "img/mancuerna5.jpg",
+      photo: "mancuerna5.jpg",
     },
     {
       name: "Cuerda de saltar",
@@ -110,7 +110,7 @@ async function productsSeeder() {
       stock: 20,
       categoryId: 2,
       featured: false,
-      photo: "img/cuerdaSalto.png",
+      photo: "cuerdaSalto.png",
     },
     {
       name: "Cuerda de trepar",
@@ -120,7 +120,7 @@ async function productsSeeder() {
       stock: 5,
       categoryId: 2,
       featured: false,
-      photo: "img/cuerdaTrepar.png",
+      photo: "cuerdaTrepar.png",
     },
     {
       name: "Colchoneta de Yoga",
@@ -130,7 +130,7 @@ async function productsSeeder() {
       stock: 20,
       categoryId: 2,
       featured: false,
-      photo: "img/colchonetaYoga.png",
+      photo: "colchonetaYoga.png",
     },
     {
       name: "Pelota Medicinal de Yoga",
@@ -140,7 +140,7 @@ async function productsSeeder() {
       stock: 10,
       categoryId: 2,
       featured: false,
-      photo: "img/pelotaPilates.png",
+      photo: "pelotaPilates.png",
     },
     {
       name: "Whey Protein 1kg",
@@ -150,7 +150,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "img/wheyProtein.png",
+      photo: "wheyProtein.png",
     },
     {
       name: "Whey Protein 2kg Chocolate",
@@ -160,7 +160,7 @@ async function productsSeeder() {
       stock: 10,
       categoryId: 2,
       featured: false,
-      photo: "img/WheyProteinChoc.jpg",
+      photo: "WheyProteinChoc.jpg",
     },
     {
       name: "Guantes Musculación Negro",
@@ -170,7 +170,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "img/GuantesNeopreno.png",
+      photo: "GuantesNeopreno.png",
     },
     {
       name: "Rodilleras de Neopreno",
@@ -180,7 +180,7 @@ async function productsSeeder() {
       stock: 5,
       categoryId: 2,
       featured: true,
-      photo: "img/rodillera.jpg",
+      photo: "rodillera.jpg",
     },
     {
       name: "Botella Agua 1lt",
@@ -190,7 +190,7 @@ async function productsSeeder() {
       stock: 10,
       categoryId: 2,
       featured: true,
-      photo: "img/botella1.jpg",
+      photo: "botella1.jpg",
     },
   ];
   await Products.bulkCreate(products);
