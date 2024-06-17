@@ -20,7 +20,7 @@ async function productsSeeder() {
       stock: 25,
       categoryId: 1,
       featured: false,
-      photo: "Disco15.png",
+      photo: "Disco15.jpg",
     },
     {
       name: "Disco Olimpico de Goma 20kg",
@@ -90,7 +90,7 @@ async function productsSeeder() {
       stock: 15,
       categoryId: 2,
       featured: false,
-      photo: "mancuerna3.png",
+      photo: "mancuerna3.jpg",
     },
     {
       name: "Mancuernas de 5kg",
