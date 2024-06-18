@@ -3,7 +3,13 @@ const { Products } = require("../models");
 const productsController = {
   index: async (req, res) => {
     try {
-      const products = await Products.findAll();
+      const { featured } = req.query;
+      let where = {};
+      if (featured === "true") {
+        where.featured = true;
+      }
+
+      const products = await Products.findAll({ where });
       return res.json(products);
     } catch (error) {
       console.error("Error", error);
