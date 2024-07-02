@@ -44,7 +44,7 @@ async function productsSeeder() {
     },
 
     {
-      name: "Rueda abdominales",
+      name: "Rueda para abdominales",
       description:
         "La secuencia de movimientos está diseñada para trabajar todo el abdomen y también los músculos de apoyo en brazos, piernas posteriores, hombros y espalda, minimizando el riesgo de dolor o lesiones. Además, la rueda incluye pedales que permiten realizar más ejercicios para el abdomen, la espalda y las piernas. ",
       price: 397,
@@ -55,13 +55,15 @@ async function productsSeeder() {
     },
 
     {
-      name: "Bandas elásticas de resistencia",
+      name: "Bandas elásticas",
       description:
         "Set 3 bandas de latex. Incluye 3 niveles de resistencia: ligero, medio y pesado.",
       price: 499,
       stock: 20,
       categoryId: 1,
       featured: true,
+
+
       photo: "bandaElastica.jpg",
     },
     {
