@@ -13,6 +13,7 @@ class Order extends Model {
           type: DataTypes.JSON,
           allowNull: false,
         },
+        // [{ productId, productName, productPrice, qty }, { productId, productName, productPrice, qty }]
         status: {
           type: DataTypes.STRING,
           allowNull: false,
