@@ -55,7 +55,7 @@ async function productsSeeder() {
     },
 
     {
-      name: "Bandas elásticas de resistencia",
+      name: "Bandas elásticas",
       description:
         "Set 3 bandas de latex. Incluye 3 niveles de resistencia: ligero, medio y pesado.",
       price: 499,
